@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>هتل سرو | اقامتی به یادماندنی</title>
+<meta name="description" content="هتل پنج‌ستاره‌ی سرو؛ اتاق‌ها و سوئیت‌های لوکس، اسپا، استخر سرپوشیده و رستوران. رزرو آنلاین.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* ===== رنگ‌ها: برای تغییر ظاهر فقط این بخش ===== */
+:root{--navy:#0c1727;--navy2:#13243b;--gold:#c9a96e;--ivory:#f7f3ea;--sand:#ebe2cf;--ink:#16202e;--mut:#667180;--line:#ddd3bd;--max:1180px}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font-family:Vazirmatn,Tahoma,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.95;font-size:16px}
+a{color:inherit;text-decoration:none}.w{max-width:var(--max);margin:auto;padding:0 28px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s;transition-delay:calc(var(--d,0)*100ms)}.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+.btn{display:inline-block;padding:13px 32px;border-radius:4px;background:var(--gold);color:var(--navy);font:inherit;font-weight:700;font-size:15px;border:1.5px solid var(--gold);cursor:pointer;transition:.3s}
+.btn:hover{background:transparent;color:var(--gold)}.btn.o{background:none;color:var(--ivory);border-color:rgba(247,243,234,.5)}.btn.o:hover{border-color:var(--gold);color:var(--gold)}
+
+/* سربرگ */
+header{position:fixed;inset:0 0 auto 0;z-index:30;height:80px;display:flex;align-items:center;transition:.4s;color:var(--ivory)}
+header.sc{background:rgba(12,23,39,.94);backdrop-filter:blur(10px);height:68px;box-shadow:0 1px 0 rgba(201,169,110,.25)}
+header .w{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px}.logo svg{width:38px;height:38px}
+.logo b{display:block;font-size:22px;font-weight:900;line-height:1.1}.logo small{display:block;font-size:10px;letter-spacing:5px;color:var(--gold)}
+nav{display:flex;gap:30px;font-size:15px}nav a{opacity:.8;transition:.25s;position:relative}nav a:hover{opacity:1;color:var(--gold)}
+header .btn{padding:9px 24px;font-size:14px}
+
+/* بالای صفحه */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:var(--ivory);overflow:hidden;background:linear-gradient(180deg,#08111d 0%,#102039 48%,#2c3345 74%,#8d6a43 100%);padding:130px 0 150px}
+.hero .arch{position:absolute;left:4%;bottom:0;height:88%;width:auto;opacity:.9;animation:fl 9s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-14px)}}
+.st{position:absolute;inset:0}.st i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;animation:tw 4s infinite}
+@keyframes tw{50%{opacity:.15}}
+.hero h1{font-size:clamp(38px,6vw,78px);line-height:1.3;font-weight:900;max-width:11em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{margin:22px 0 34px;max-width:30em;font-size:19px;color:#cdd5e0}
+.hero .w{position:relative;z-index:2}.row{display:flex;gap:14px;flex-wrap:wrap}
+
+/* نوار رزرو */
+.bk{position:absolute;z-index:5;bottom:34px;inset-inline:0}
+.bk form{background:var(--ivory);color:var(--ink);border-radius:6px;box-shadow:0 24px 60px rgba(0,0,0,.4);display:grid;grid-template-columns:repeat(3,1fr) auto;align-items:stretch;overflow:hidden}
+.bk label{padding:14px 22px;border-left:1px solid var(--line);display:block}
+.bk label span{display:block;font-size:12px;color:var(--mut)}
+.bk select{width:100%;border:0;background:none;font:inherit;font-weight:700;font-size:16px;color:var(--ink);padding:2px 0;cursor:pointer}
+.bk button{border:0;border-radius:0;padding:0 38px;background:var(--navy);color:var(--gold);font:inherit;font-weight:700;font-size:16px;cursor:pointer;transition:.3s}
+.bk button:hover{background:var(--gold);color:var(--navy)}
+#sum{display:none;margin-top:10px;background:var(--navy2);color:var(--ivory);padding:14px 22px;border-radius:6px;border:1px solid rgba(201,169,110,.4);font-size:15px}
+#sum b{color:var(--gold);font-size:19px}
+
+/* بخش‌ها */
+section{padding:100px 0}
+h2{font-size:clamp(30px,4vw,46px);font-weight:900;line-height:1.4;margin-bottom:12px}
+.lead{color:var(--mut);max-width:34em}.gd{color:var(--gold)}
+.ab{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}
+.stats div{padding:26px 0;border-bottom:1px solid var(--line)}.stats div:nth-child(odd){padding-left:20px;border-left:1px solid var(--line)}.stats div:nth-child(even){padding-right:28px}
+.stats b{display:block;font-size:44px;font-weight:900;color:var(--navy);line-height:1.3}.stats span{color:var(--mut);font-size:14px}
+.dark{background:var(--navy);color:var(--ivory)}.dark .lead{color:#a9b4c4}.dark h2{color:var(--ivory)}
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.rm{background:var(--navy2);border:1px solid rgba(201,169,110,.18);border-radius:6px;overflow:hidden;transition:.4s}
+.rm:hover{transform:translateY(-8px);border-color:var(--gold)}
+.ph{height:230px;position:relative;background:var(--g);display:grid;place-items:center}
+.ph svg{width:120px;height:120px;opacity:.7}
+.rm .bd{padding:24px}.rm h3{font-size:22px;margin-bottom:4px}.rm p{color:#a9b4c4;font-size:14.5px;margin-bottom:18px}
+.rm .pr{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(201,169,110,.2);padding-top:16px}
+.rm .pr b{font-size:20px;color:var(--gold)}.rm .pr small{color:#a9b4c4;font-size:12px;display:block;line-height:1.4}
+.rm .btn{padding:8px 20px;font-size:14px}
+.am{display:grid;grid-template-columns:repeat(3,1fr);margin-top:48px;border-top:1px solid var(--line);border-right:1px solid var(--line)}
+.am div{padding:34px 28px;border-bottom:1px solid var(--line);border-left:1px solid var(--line);transition:.3s}
+.am div:hover{background:var(--sand)}.am svg{width:40px;height:40px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.am h3{font-size:19px}.am p{color:var(--mut);font-size:14.5px}
+.gl{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px;margin-top:44px}
+.gl div{background:var(--g);border-radius:4px;position:relative;overflow:hidden;transition:.5s}.gl div:hover{transform:scale(1.02)}
+.gl div:nth-child(1){grid-column:span 2;grid-row:span 2}.gl div:nth-child(4){grid-column:span 2}
+.gl span{position:absolute;bottom:14px;right:16px;font-weight:700;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.qs{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:44px}
+.q{border-top:2px solid var(--gold);padding-top:22px}.q p{font-size:17px;line-height:2}.q b{display:block;margin-top:14px;color:var(--gold);font-weight:700;font-size:15px}
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.ct .it{padding:16px 0;border-top:1px solid rgba(201,169,110,.25)}.ct small{color:var(--gold);display:block;font-size:13px}.ct b{font-size:20px;font-weight:700}
+footer{background:#070e18;color:#8794a6;padding:26px 0;text-align:center;font-size:14px}
+@media (max-width:900px){
+ nav{display:none}.ab,.ct{grid-template-columns:1fr;gap:34px}.rooms,.qs,.am{grid-template-columns:1fr}.gl{grid-template-columns:1fr 1fr}.gl div:nth-child(1){grid-column:span 2}
+ .hero .arch{opacity:.25;left:-20%}.hero{padding:110px 0 330px}.bk form{grid-template-columns:1fr 1fr}.bk label{border-bottom:1px solid var(--line)}.bk button{grid-column:span 2;padding:15px}section{padding:68px 0}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header id="hd"><div class="w">
+  <a class="logo" href="#top" aria-label="هتل سرو">
+    <svg viewBox="0 0 40 40" fill="none" stroke="#c9a96e" stroke-width="2" stroke-linejoin="round"><path d="M6 38V18A14 14 0 0 1 34 18V38"/><path d="M12 38V19A8 8 0 0 1 28 19V38" opacity=".6"/><path d="M3 38H37"/></svg>
+    <span><b>هتل سرو</b><small>SARV HOTEL</small></span>
+  </a>
+  <nav><a href="#about">درباره‌ی هتل</a><a href="#rooms">اتاق‌ها</a><a href="#amenities">امکانات</a><a href="#gallery">گالری</a><a href="#contact">تماس</a></nav>
+  <a class="btn" href="#book">رزرو</a>
+</div></header>
+
+<section class="hero" id="top" style="padding-bottom:150px">
+  <div class="st" id="st"></div>
+  <!-- تصویر طاق: برای عکس واقعی هتل، این SVG را با تگ img یا background عوض کنید -->
+  <svg class="arch" viewBox="0 0 420 640" fill="none" aria-hidden="true">
+    <defs><linearGradient id="gw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9a96e" stop-opacity=".05"/><stop offset="1" stop-color="#e3b974" stop-opacity=".55"/></linearGradient></defs>
+    <path d="M30 640V230A180 180 0 0 1 390 230V640" stroke="#c9a96e" stroke-width="1.6"/>
+    <path d="M70 640V235A140 140 0 0 1 350 235V640" stroke="#c9a96e" stroke-width="1.2" opacity=".7"/>
+    <path d="M110 640V240A100 100 0 0 1 310 240V640" fill="url(#gw)" stroke="#c9a96e" stroke-width="1"/>
+    <path d="M210 140V640M150 640V250M270 640V250" stroke="#c9a96e" stroke-width=".8" opacity=".35"/>
+  </svg>
+  <div class="w"><div class="rv">
+    <h1>اقامتی به‌یادماندنی، <em>در دل آرامش</em></h1>
+    <p>هتل پنج‌ستاره‌ی سرو؛ جایی که معماری اصیل، خدمات بی‌نقص و مهمان‌نوازی ایرانی در کنار هم قرار می‌گیرند.</p>
+    <div class="row"><a class="btn" href="#book">رزرو اتاق</a><a class="btn o" href="#rooms">مشاهده‌ی اتاق‌ها</a></div>
+  </div></div>
+
+  <div class="bk" id="book"><div class="w">
+    <form id="f">
+      <label><span>نوع اتاق</span><select id="rt"><option value="0">اتاق دلوکس</option><option value="1">سوئیت جونیور</option><option value="2">سوئیت رویال</option></select></label>
+      <label><span>تعداد شب</span><select id="nt"></select></label>
+      <label><span>تعداد مهمان</span><select id="gs"><option>۱ نفر</option><option selected>۲ نفر</option><option>۳ نفر</option><option>۴ نفر</option></select></label>
+      <button type="submit">محاسبه‌ی هزینه و رزرو</button>
+    </form>
+    <div id="sum" role="status"></div>
+  </div></div>
+</section>
+
+<section id="about"><div class="w ab">
+  <div class="rv">
+    <h2>مهمان‌نوازی، <span class="gd">با اصالت و کلاس</span></h2>
+    <p class="lead">هتل سرو با ترکیب معماری سنتی و امکانات مدرن، تجربه‌ای آرام و لوکس برای سفرهای تفریحی و کاری فراهم می‌کند؛ از لحظه‌ی ورود تا آخرین ساعت اقامت.</p>
+    <p class="lead" style="margin-top:14px">متن این بخش نمونه است و برای پروژه‌ی واقعی با اطلاعات هتل جایگزین می‌شود.</p>
+  </div>
+  <div class="stats rv" style="--d:2">
+    <div><b>۵★</b><span>رتبه‌ی هتل</span></div><div><b>۱۲۰</b><span>اتاق و سوئیت</span></div>
+    <div><b>۲۴/۷</b><span>خدمات پذیرش و اتاق</span></div><div><b>۱۵+</b><span>سال تجربه‌ی میزبانی</span></div>
+  </div>
+</div></section>
+
+<section id="rooms" class="dark"><div class="w">
+  <h2 class="rv">اتاق‌ها و سوئیت‌ها</h2>
+  <p class="lead rv" style="--d:1">هر اتاق با دقت طراحی شده تا آرامش و راحتی شما در اولویت باشد.</p>
+  <div class="rooms" id="rg"></div>
+</div></section>
+
+<section id="amenities"><div class="w">
+  <h2 class="rv">امکانات هتل</h2>
+  <p class="lead rv" style="--d:1">هرچه برای یک اقامت کامل لازم دارید، در یک مجموعه.</p>
+  <div class="am rv" style="--d:2" id="ag"></div>
+</div></section>
+
+<section id="gallery" class="dark"><div class="w">
+  <h2 class="rv">گالری</h2>
+  <p class="lead rv" style="--d:1">نمونه‌ای از فضاهای هتل (برای نسخه‌ی نهایی، عکس‌های واقعی هتل جایگزین می‌شود).</p>
+  <div class="gl rv" style="--d:2">
+    <div style="--g:linear-gradient(160deg,#1c3556,#0c1727 60%,#8d6a43)"><span>لابی</span></div>
+    <div style="--g:linear-gradient(200deg,#2a4a5c,#12263a)"><span>استخر</span></div>
+    <div style="--g:linear-gradient(120deg,#5a4630,#1b1810)"><span>رستوران</span></div>
+    <div style="--g:linear-gradient(90deg,#12263a,#3d3550 70%,#c9a96e)"><span>اسپا</span></div>
+    <div style="--g:linear-gradient(180deg,#3a2f22,#0c1727)"><span>سوئیت</span></div>
+    <div style="--g:linear-gradient(140deg,#8d6a43,#2c3345)"><span>تراس</span></div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2 class="rv">نظر مهمانان</h2>
+  <div class="qs">
+    <div class="q rv"><p>آرامش و نظافت فوق‌العاده؛ پذیرش هم خیلی حرفه‌ای بود.</p><b>— مهمان نمونه ۱</b></div>
+    <div class="q rv" style="--d:1"><p>صبحانه و رستوران هتل عالی بود. حتماً دوباره برمی‌گردیم.</p><b>— مهمان نمونه ۲</b></div>
+    <div class="q rv" style="--d:2"><p>اسپا و استخر، بهترین بخش سفر ما بود.</p><b>— مهمان نمونه ۳</b></div>
+  </div>
+</div></section>
+
+<section id="contact" class="dark"><div class="w ct">
+  <div class="rv"><h2>رزرو و <span class="gd">تماس</span></h2><p class="lead">برای رزرو و دریافت مشاوره با ما در تماس باشید.</p>
+    <div class="row" style="margin-top:26px"><a class="btn" href="tel:+982100000000">تماس با پذیرش</a><a class="btn o" href="#book">رزرو آنلاین</a></div></div>
+  <div class="rv" style="--d:1">
+    <div class="it"><small>آدرس</small><b>[آدرس هتل]</b></div>
+    <div class="it"><small>تلفن</small><b dir="ltr" style="display:block;text-align:right">۰۲۱-۰۰۰۰۰۰۰۰</b></div>
+    <div class="it" style="border-bottom:1px solid rgba(201,169,110,.25)"><small>ایمیل</small><b dir="ltr" style="display:block;text-align:right">info@example.com</b></div>
+  </div>
+</div></section>
+<footer>© هتل سرو. نمونه‌ی طراحی وب‌سایت هتل.</footer>
+
+<script>
+const fa=n=>(+n).toLocaleString("fa-IR");
+/* اتاق‌ها: نام، توضیح، قیمت هر شب (تومان) */
+const R=[["اتاق دلوکس","اتاقی دل‌باز با تخت دو نفره، میز کار و منظره‌ی شهر.",3200000,"linear-gradient(160deg,#27456b,#12233a)"],
+["سوئیت جونیور","فضای نشیمن مجزا، حمام مجلل و تراس خصوصی.",5400000,"linear-gradient(160deg,#4a3a5c,#1a2236)"],
+["سوئیت رویال","بزرگ‌ترین سوئیت هتل با سرویس اختصاصی و منظره‌ی کامل.",9800000,"linear-gradient(160deg,#a47c4a,#2a2330)"]];
+document.getElementById("rg").innerHTML=R.map((r,i)=>'<div class="rm rv" style="--d:'+i+'"><div class="ph" style="--g:'+r[3]+'"><svg viewBox="0 0 40 40" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M6 38V18A14 14 0 0 1 34 18V38"/><path d="M12 38V19A8 8 0 0 1 28 19V38" opacity=".6"/></svg></div><div class="bd"><h3>'+r[0]+'</h3><p>'+r[1]+'</p><div class="pr"><div><b>'+fa(r[2])+'</b><small>تومان / هر شب</small></div><a class="btn" href="#book" data-r="'+i+'">انتخاب</a></div></div></div>').join("");
+/* امکانات */
+const A=[["استخر سرپوشیده","شنا در هر فصل، با آب گرم و فضایی آرام.","M3 16c3 0 3-2 6-2s3 2 6 2 3-2 6-2M3 21c3 0 3-2 6-2s3 2 6 2 3-2 6-2M8 12V5a2 2 0 0 1 4 0M15 12V5a2 2 0 0 1 4 0"],
+["اسپا و سلامت","ماساژ، سونا و جکوزی برای تجدید قوا.","M12 21C6 17 4 12 5 6c6 0 10 3 7 15zM12 21c1-5 4-9 8-10"],
+["رستوران","غذاهای ایرانی و بین‌المللی با سرآشپز حرفه‌ای.","M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 3c-2 2-3 5-3 8h3v10"],
+["اینترنت پرسرعت","وای‌فای رایگان در همه‌ی بخش‌های هتل.","M2 9a15 15 0 0 1 20 0M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"],
+["پارکینگ اختصاصی","پارکینگ امن و رایگان برای مهمانان.","M5 3h9a5 5 0 0 1 0 10H9v8M5 21V3"],
+["سالن همایش","فضای مناسب برای جلسات و رویدادهای شرکتی.","M3 21v-2a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v2M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M17 14a4 4 0 0 1 4 4v3M16 4a3.5 3.5 0 0 1 0 7"]];
+document.getElementById("ag").innerHTML=A.map(a=>'<div><svg viewBox="0 0 24 24"><path d="'+a[2]+'"/></svg><h3>'+a[0]+'</h3><p>'+a[1]+'</p></div>').join("");
+/* ستاره‌ها */
+document.getElementById("st").innerHTML=Array.from({length:46},()=>'<i style="top:'+(Math.random()*62)+'%;left:'+(Math.random()*100)+'%;animation-delay:'+(Math.random()*4)+'s"></i>').join("");
+/* نوار رزرو و محاسبه */
+const nt=document.getElementById("nt");for(let i=1;i<=10;i++)nt.insertAdjacentHTML("beforeend",'<option value="'+i+'">'+fa(i)+" شب</option>");
+document.getElementById("f").onsubmit=e=>{e.preventDefault();const r=R[+rt.value],n=+nt.value,t=r[2]*n;
+  const s=document.getElementById("sum");s.style.display="block";s.innerHTML=r[0]+" برای "+fa(n)+" شب، "+gs.value+": مجموع <b>"+fa(t)+"</b> تومان. برای نهایی‌کردن رزرو با پذیرش تماس بگیرید."};
+document.querySelectorAll("[data-r]").forEach(a=>a.onclick=()=>{rt.value=a.dataset.r});
+/* سربرگ و ظاهر شدن بخش‌ها */
+const hd=document.getElementById("hd"),sc=()=>hd.classList.toggle("sc",scrollY>40);sc();addEventListener("scroll",sc,{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
